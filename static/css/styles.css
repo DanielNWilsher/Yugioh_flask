@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full height of the viewport */
+    margin: 0;               /* Remove default margin */
+    text-align: center;      /* Center text */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card {
+    width: 100%;
+    max-width: 200px; /* Adjust the width for better display */
+}
