@@ -7,9 +7,15 @@ def home():
     return render_template('index.html', title="Yu-Gi-Oh", message="Is King of Games")
 
 
-@app.route('/darkMagician')
-def darkMagician():
-    return render_template('cards.html', monsterName= "Dark Magician", elementType="Dark", stars="7", cardName="Dark-Magician.jpg", creatureType="Spellcaster", cardType="Normal", atk="2500", defense="2100")
+@app.route('/darkMagician/<cardType>')
+def darkMagician(cardType):
+    if cardType == 'Normal':
+        bg_color = '#FDE68A'  # Background color for Normal
+    elif cardType == 'Effect':
+        bg_color = '#FF8B53'  # Background color for Effect
+    else:
+        bg_color = '#FFFFFF'  # Default background if cardType is unknown
+    return render_template('cards.html', bg_color=bg_color, monsterName= "Dark Magician", elementType="Dark", stars="7", cardName="Dark-Magician.jpg", creatureType="Spellcaster", cardType="Normal", atk="2500", defense="2100")
 
 @app.route('/blueEyesWhiteDragon')
 def blueEyesWhiteDragon():
