@@ -21,6 +21,11 @@ def darkMagician(cardType):
 def blueEyesWhiteDragon():
     return render_template('cards.html', monsterName="Blue Eyes White Dragon", elementType="Light", stars="8", cardName="BlueEyesWhiteDragon-OW.webp", creatureType="Dragon", cardType="Normal", atk="3000", defense="2500")
 
+@app.route('/celticGuardian')
+def celticGuardian():
+    return render_template('cards.html', monsterName="Celtic Guardian", elementType="Earth", stars="4", cardName="CelticGuardian-OW.webp", creatureType="Warrior", cardType="Normal", atk="1400", defense="1200")
+
+
 @app.route('/redEyesBlackDragon')
 def redEyesBlackDragon():
     return render_template('cards.html', monsterName="Red Eyes Black Dragon", elementType="Dark", stars="7", cardName="RedEyesBDragon-OW.webp", creatureType="Dragon", cardType="Normal", atk="2400", defense="2000")
