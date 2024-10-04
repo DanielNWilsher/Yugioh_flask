@@ -30,6 +30,10 @@ def celticGuardian():
 def redEyesBlackDragon():
     return render_template('cards.html', monsterName="Red Eyes Black Dragon", elementType="Dark", stars="7", cardName="RedEyesBDragon-OW.webp", creatureType="Dragon", cardType="Normal", atk="2400", defense="2000")
 
+@app.route('/relinquished')
+def relinquished():
+    return render_template('cards.html', monsterName="Relinquished", elementType="Dark", stars="1", cardName="Relinquished-TF04-JP-VG.webp", creatureType="Spellcaster", cardType="Ritual", atk="0", defense="0")
+
 if __name__ == '__main__':
     app.run(debug=True)
 
